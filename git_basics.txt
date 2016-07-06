@@ -1,5 +1,7 @@
 Git Basics:
 
+Git is a version control system.
+
 git init - initialises a new git project.
 
 Git project has three parts.
