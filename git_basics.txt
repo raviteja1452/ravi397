@@ -23,6 +23,8 @@ git show HEAD - displays log for HEAD commit and the file changes that were comm
 
 git checkout HEAD filename - restore the file in your working directory to look as it did when you last made a commit
 
+git reset HEAD filename - this moves the file from staging area to working directory before commit
+
 git reset SHA - resets the repository to one of the previous commit points using the 7 characters of SHA in previous commits
 
 BRANCHING
