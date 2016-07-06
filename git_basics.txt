@@ -28,3 +28,13 @@ git reset HEAD filename - this moves the file from staging area to working direc
 git reset SHA - resets the repository to one of the previous commit points using the 7 characters of SHA in previous commits
 
 BRANCHING
+
+git branch - lists all the branches in git project
+
+git branch brach_name - creates a new branch
+
+git checkout branch_name - used to switch from one branch to another
+
+git merge branch_name - used to join files from the branch to current branch
+
+git branch -d branch_name - used to delete branch
