@@ -8,7 +8,21 @@ Git project has three parts.
 2.Staging Area
 3.Repository
 
+
 git status - shows the working tree status
-git add filename - adds the file to the staging area
+
+git add filename - adds the file to the staging area(we can add two files with their names by giving space after each filename)
+
 git diff filename - tells us about the difference between staging and working directory of a file
+
 git log - log a list your commits
+
+HEAD - is a pointer that points generally to the recent commit
+
+git show HEAD - displays log for HEAD commit and the file changes that were committed
+
+git checkout HEAD filename - restore the file in your working directory to look as it did when you last made a commit
+
+git reset SHA - resets the repository to one of the previous commit points using the 7 characters of SHA in previous commits
+
+BRANCHING
