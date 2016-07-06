@@ -38,3 +38,18 @@ git checkout branch_name - used to switch from one branch to another
 git merge branch_name - used to join files from the branch to current branch
 
 git branch -d branch_name - used to delete branch
+
+
+CONNECTING TO REMOTE
+
+git clone - creates a local copy of remote
+
+git remote -v - lists a git project’s remote
+
+git fetch - fetches work from remote into local copy
+
+git merge origin/master - merges origin/master into current branch
+
+git push origin branch_name - pushes the branch to origin
+
+
