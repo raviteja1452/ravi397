@@ -8,4 +8,7 @@ Git project has three parts.
 2.Staging Area
 3.Repository
 
-git status - shows the working tree status	
+git status - shows the working tree status
+git add filename - adds the file to the staging area
+git diff filename - tells us about the difference between staging and working directory of a file
+git log - log a list your commits
