@@ -1,0 +1,11 @@
+Git Basics:
+
+git init - initialises a new git project.
+
+Git project has three parts.
+
+1.Working Directory
+2.Staging Area
+3.Repository
+
+git status - shows the working tree status	
