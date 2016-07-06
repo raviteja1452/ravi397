@@ -28,3 +28,5 @@ git reset HEAD filename - this moves the file from staging area to working direc
 git reset SHA - resets the repository to one of the previous commit points using the 7 characters of SHA in previous commits
 
 BRANCHING
+
+Will be discussed later
