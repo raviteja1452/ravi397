@@ -1,0 +1,19 @@
+Basics:
+
+Bash is a Unix shell and command language written by Brian Fox for the GNU Project as a free software. 
+
+Bash is a command processor that typically runs in a text window, where the user types commands that cause actions.
+
+Bash can also read commands from a file, called a script. 
+
+ps - report snapshot of a current processes
+
+ps can accept various types of options
+
+UNIX : which are grouped together and preceeded by dash
+
+BSD : which are grouped together and are not preceeded by dash
+
+GNU : which are grouped and proceeded by a double dash
+
+ps - process status

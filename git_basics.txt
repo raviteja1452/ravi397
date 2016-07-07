@@ -55,3 +55,19 @@ git merge origin/master - merges origin/master into current branch
 git push origin branch_name - pushes the branch to origin
 
 
+git push origin branch name - pushes to origin from our branch
+
+git pull origin branch_name - pulls from origin to branch_name
+
+git branch -d branch_name - deletes the branch locally
+
+git push origin —delete branch_name - deletes the branch on origin
+
+git push origin branch_name - pushes a new branch from local to origin 
+
+git gives only master branch on cloning in default
+
+checkout to other branches if working in other branches
+
+
+
