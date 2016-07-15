@@ -8,14 +8,14 @@ class BinaryServer extends BaseServer{
 				$var = $str['params']['file'];
 				if (file_exists($var)) {
 				    $file = fopen($var,'rb');
-					$output = fread($file,filesize($var));
+					$output['var'] = fread($file,filesize($var));
 					fclose($file);
 				} else {
-				    $output = "FILE NOT FOUND";
+				    $output['var'] = "FILE NOT FOUND";
 				    echo "FILE NOT FOUND";
 				}
 			}else{
-				$output = "FILE NOT FOUND";
+				$output['var'] = "FILE NOT FOUND";
 				echo "FILE NAME NOT FOUND";
 			}
 			return $output;

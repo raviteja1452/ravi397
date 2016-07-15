@@ -86,22 +86,34 @@ class BaseServer extends HttpServer{
 	}
 	function route($items){
 		$result = NULL;
+		$output = NULL;
 		try{
 			if($items['action']){
-				$query = ucfirst($items['action']);
-				$query = $query."Server";
-				if (class_exists($query)) 
+				if($items['action']!=="favicon.ico")
 				{
+					$query = ucfirst($items['action']);
+					$template = $query."Handler";
+					$query = $query."Server";
 					$obj = new $query;
-				}else{
-					return NULL;
+					$result = $obj->execute($items);
+					$output = $this->renderTemplate($template,$result);
 				}
-				$result = $obj->execute($items);
 			}
 		}catch(Exception $e){
 			die("Error Message".$e->getMessage()."\n");
 		}
-		return $result;
+		return $output;
+	}
+
+	function renderTemplate($query,$result){
+
+		$var = 'Html/'.$query.'.html';
+		$file = fopen($var,'r');
+		$output = fread($file,filesize($var));
+		foreach ($result as $id=>$value){
+			$output = str_replace("{{".$id."}}",$value,$output);
+		}
+		return $output;
 	}
 	
 	function post($output,$client){

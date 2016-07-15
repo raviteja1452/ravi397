@@ -6,10 +6,10 @@ class EchoServer extends BaseServer{
 		try{
 			if($str['params']['string']){
 				$var = $str['params']['string'];
-				$output = $var;
+				$output['var'] = $var;
 				echo "From Client :".$var."\n";
 			}else{
-				$output = "String is Not Found";
+				$output['var'] = "String is Not Found";
 			}
 			return $output;
 		}catch(Exception $e){
