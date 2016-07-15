@@ -61,7 +61,7 @@ git pull origin branch_name - pulls from origin to branch_name
 
 git branch -d branch_name - deletes the branch locally
 
-git push origin —delete branch_name - deletes the branch on origin
+git push origin -—delete branch_name - deletes the branch on origin
 
 git push origin branch_name - pushes a new branch from local to origin 
 
