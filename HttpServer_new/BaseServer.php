@@ -90,39 +90,25 @@ class BaseServer extends HttpServer{
 	}
 	function route($items){
 		$result = NULL;
-		switch($items['action']){
-			case 'echo':
-				require_once('EchoServer.php');
-				$obj = new EchoServer();
+		try{
+			if($items['action']){
+				$query = ucfirst($items['action']);
+				$query = $query."Server";
+				if (class_exists($query)) 
+				{
+					$obj = new $query;
+				}else{
+					return NULL;
+				}
 				$result = $obj->execute($items);
-				break;
-			case 'ping':
-				require_once('PingServer.php');
-				$obj = new PingServer();
-				$result = $obj->execute($items);
-				break;
-			case 'file':
-				require_once('FileServer.php');
-				$obj = new FileServer();
-				$result = $obj->execute($items);
-				break;
-			case 'binary':
-				require_once('BinaryServer.php');
-				$obj = new BinaryServer();
-				$result = $obj->execute($items);
-				break;
-			case 'reverse':
-				require_once('StringServer.php');
-				$obj = new StringServer();
-				$result = $obj->execute($items);
-				break;
-			default:
-				$result = NULL;
+			}
+		}catch(Exception $e){
+			die("Error Message".$e->getMessage()."\n");
 		}
 		return $result;
 	}
+	
 	function post($output,$client){
-		#echo "IN POST".$output."\n";
 
 		socket_write($client,$output,strlen($output));
 		socket_close($client);
