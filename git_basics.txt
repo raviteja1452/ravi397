@@ -69,5 +69,5 @@ git gives only master branch on cloning in default
 
 checkout to other branches if working in other branches
 
-
+Git checking with new line
 
