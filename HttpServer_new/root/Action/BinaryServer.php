@@ -2,7 +2,7 @@
 
 class BinaryServer extends BaseServer{
 
-	function execute($str){	
+	function execute($str,$db){	
 		try{
 			if($str['params']['file']){
 				$var = $str['params']['file'];

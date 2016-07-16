@@ -3,7 +3,6 @@
 spl_autoload_register(function ($query) {
 	$connection = $query.'.php';
 	if(file_exists('Server/'.$connection)){
-		
     	require_once('Server/'.$connection);
 	}
     else if(file_exists('Action/'.$connection)){

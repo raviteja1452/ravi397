@@ -2,7 +2,7 @@
 
 class StringServer extends BaseServer{
 	
-	function execute($str){	
+	function execute($str,$db){	
 		try{
 			if($str['params']['string']){
 				$var = $str['params']['string'];
